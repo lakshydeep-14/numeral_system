@@ -7,6 +7,12 @@ import 'package:flutter/material.dart';
 
 enum NumberSystem { indian, international }
 
+enum DigitAfterDecimal {
+  one,
+  two,
+  three,
+}
+
 // class for numneral system
 class NumeralSystem extends StatefulWidget {
   // number system type, either INTERNATIONAL or INDIAN
@@ -22,13 +28,13 @@ class NumeralSystem extends StatefulWidget {
 
   //int value to show number of digits after decimal
   //By default it's 3 which mean it will show 2 digits after decimal.
-  final int afterDecimalDigits;
+  final DigitAfterDecimal digitAfterDecimal;
 
   const NumeralSystem(
       {super.key,
       this.numberSystem = NumberSystem.international,
       required this.digit,
-      this.afterDecimalDigits = 3,
+      this.digitAfterDecimal = DigitAfterDecimal.two,
       this.textStyle = const TextStyle(color: Colors.black)});
 
   @override
@@ -46,8 +52,8 @@ class _NumeralSystemState extends State<NumeralSystem> {
     );
   }
 
-  double getNumber(double input) => double.parse(
-      double.parse('$input').toStringAsFixed(widget.afterDecimalDigits));
+  String getNumber(double input) =>
+      "${input.toString().split(".").first}.${input.toStringAsFixed(4).toString().split(".").last.substring(0, widget.digitAfterDecimal == DigitAfterDecimal.one ? 1 : widget.digitAfterDecimal == DigitAfterDecimal.two ? 2 : 3)}";
   _indian(num number) {
     if (number == 0) {
       return '0';

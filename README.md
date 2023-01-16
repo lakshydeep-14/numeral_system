@@ -13,7 +13,7 @@ This plugin helps you to display number as per International or Indian Numeral S
 
 * You can use any of the numeral system.
 * You can add textstyle.
-* You can chose the numbers of digit to be displayed after decimal.
+* You can choose the numbers of digit to be displayed after decimal.
 
 
 ## Installation
@@ -36,7 +36,7 @@ Add NumeralSystem to the widget tree
 Scaffold(
     body: Center(
         child:
-            //By Default i.e INTERNATIONAL
+            //By Default i.e INTERNATIONAL and two digits after decimal
             NumeralSystem(digit: 934023),
         )
     )
@@ -48,38 +48,39 @@ For Indian System
 NumeralSystem(
     numberSystem: NumberSystem.indian,
     digit: 987387659876,
-    afterDecimalDigits: 5,
+    digitAfterDecimal: DigitAfterDecimal.one,
     ),
 ```
 
-For 4 digits after decimal
+For 3 digits after decimal
 
 ```dart
 NumeralSystem(
     digit: 195659876,
     numberSystem: NumberSystem.indian,
-    afterDecimalDigits: 4,
+    digitAfterDecimal: DigitAfterDecimal.three,
     ),
 ```
 
 For adding textstyle
 
 ```dart
-NumeralSystem(
-    digit: 198765987,
+ NumeralSystem(
+    digit: 987654,
+    digitAfterDecimal: DigitAfterDecimal.three,
     textStyle: TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.bold,
-        color: Colors.red)
+        color: Colors.red)),
     ),
 ```
 
 
 ## Support and feedback
 
-If I miss to add some feature, feel free to open a ticket or contribute!
+If I had missed anything to add, feel free to open a ticket or contribute!
 You can reach me here:
-[LinkedIn](https://www.linkedin.com/in/lakshydeep-14/)
-[GitHub](https://github.com/lakshydeep-14)
-[Medium](https://lakshydeep-14.medium.com/)
+[LinkedIn](https://www.linkedin.com/in/lakshydeep-14/) |
+[GitHub](https://github.com/lakshydeep-14) |
+[Medium](https://lakshydeep-14.medium.com/) |
 [Google DevLibrary](https://devlibrary.withgoogle.com/authors/lakshydeep-14)

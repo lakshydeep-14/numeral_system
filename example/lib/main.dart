@@ -38,11 +38,12 @@ class _DemoState extends State<Demo> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //By Default i.e INTERNATIONAL
-              NumeralSystem(digit: 934023),
+              NumeralSystem(digit: 12345000),
 
               //ADDING TEXTSTYLE
               NumeralSystem(
-                  digit: 198765987,
+                  digit: 987654,
+                  digitAfterDecimal: DigitAfterDecimal.three,
                   textStyle: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -52,14 +53,14 @@ class _DemoState extends State<Demo> {
               NumeralSystem(
                 numberSystem: NumberSystem.indian,
                 digit: 987387659876,
-                afterDecimalDigits: 5,
+                digitAfterDecimal: DigitAfterDecimal.two,
               ),
 
               //2 digits
               NumeralSystem(
                 digit: 195659876,
                 numberSystem: NumberSystem.indian,
-                afterDecimalDigits: 2,
+                digitAfterDecimal: DigitAfterDecimal.three,
               ),
             ]),
       ),
