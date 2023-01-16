@@ -49,14 +49,14 @@ class _DemoState extends State<Demo> {
                       fontWeight: FontWeight.bold,
                       color: Colors.red)),
 
-              // After decimal 5 digits
+              // After decimal 2 digits
               NumeralSystem(
                 numberSystem: NumberSystem.indian,
                 digit: 987387659876,
                 digitAfterDecimal: DigitAfterDecimal.two,
               ),
 
-              //2 digits
+              //3 digits
               NumeralSystem(
                 digit: 195659876,
                 numberSystem: NumberSystem.indian,
