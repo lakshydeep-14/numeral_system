@@ -1,6 +1,6 @@
 name: numeral_system
 description: A package to show number in the form of International Numeral System(Millions, Billions, Trillions) and in Indian Numeral System(Lakh, Crore, Arab).
-version: 2.0.0
+version: 2.0.0+1
 homepage: https://github.com/lakshydeep-14/numeral_system
 
 environment:
